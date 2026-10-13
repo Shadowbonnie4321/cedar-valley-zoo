@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173d2b">
+
+<title>Cedar Valley Zoo | Always Caring</title>
+
+<style>
+:root {
+  --forest: #173d2b;
+  --green: #28563a;
+  --leaf: #58834b;
+  --gold: #e7c878;
+  --cream: #f5f1e5;
+  --brown: #79563b;
+  --text: #243329;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--forest);
+  color: white;
+  padding: 22px 16px;
+  text-align: center;
+  border-bottom: 5px solid var(--gold);
+}
+
+.logo {
+  font-size: 34px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  color: var(--gold);
+  font-weight: bold;
+  margin: 3px 0 12px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 7px 12px;
+  border: 1px solid #66856d;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: var(--leaf);
+}
+
+.hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  background:
+    linear-gradient(135deg,
+    rgba(13, 47, 30, .94),
+    rgba(40, 86, 58, .78)),
+    url("images/zoo-entrance.jpg") center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h2 {
+  font-size: clamp(34px, 8vw, 58px);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--forest);
+  padding: 12px 22px;
+  margin: 8px 4px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: white;
+}
+
+section {
+  padding: 42px 18px;
+  max-width: 1100px;
+  margin: auto;
+  scroll-margin-top: 15px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  color: var(--forest);
+  font-size: 30px;
+  margin-bottom: 4px;
+}
+
+.section-heading p {
+  color: #657366;
+  margin-top: 0;
+}
+
+.welcome {
+  text-align: center;
+  max-width: 800px;
+}
+
+.feature-grid,
+.animal-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, minmax(min(100%, 230px), 1fr)
+  );
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px #203c2617;
+  border: 1px solid #dedfd3;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.card h3 {
+  color: var(--green);
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  background: #e5eadc;
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+}
+
+.animal-photo,
+.gallery-photo {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background: #dce6d4;
+}
+
+.gallery-photo {
+  height: 230px;
+}
+
+.photo-placeholder {
+  height: 210px;
+  background: linear-gradient(135deg, #dce8d3, #a8c29a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  color: var(--forest);
+  font-size: 17px;
+}
+
+.slogan-banner {
+  background: var(--forest);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+}
+
+.slogan-banner h2 {
+  color: var(--gold);
+  font-size: clamp(25px, 5vw, 38px);
+  margin: 0;
+}
+
+.notice {
+  background: #e6ecdc;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 5px solid var(--leaf);
+}
+
+footer {
+  background: #102a1d;
+  color: #e6eadf;
+  padding: 28px 18px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--gold);
+}
+
+.small {
+  font-size: 13px;
+  opacity: .85;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 27px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+  }
+
+  section {
+    padding: 32px 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+  <h1 class="logo">🌲 Cedar Valley Zoo</h1>
+  <p class="tagline">Always Caring</p>
+
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#animals">Animals</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#goodbyes">Goodbyes</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Discover a Wilder World</h2>
+      <p>
+        Welcome to Cedar Valley Zoo, a world of wildlife,
+        wonderful habitats and unforgettable animal adventures.
+      </p>
+      <a class="button" href="#animals">Meet Our Animals</a>
+      <a class="button" href="#gallery">Explore the Gallery</a>
+    </div>
+  </div>
+
+  <section id="about" class="welcome">
+    <div class="section-heading">
+      <h2>Welcome to Cedar Valley Zoo</h2>
+      <p>A Planet Zoo 2 creation by Harvey</p>
+    </div>
+
+    <p>
+      Cedar Valley Zoo is a growing wildlife park created in
+      Planet Zoo 2. Our goal is to create beautiful habitats,
+      celebrate the incredible diversity of animals and build
+      a place where every creature matters.
+    </p>
+
+    <p>
+      From colourful birds soaring through our aviary to the
+      amazing animals we hope to welcome in the future,
+      every new addition helps our zoo grow.
+    </p>
+
+    <div class="notice">
+      <strong>Our promise:</strong> Every animal has a story,
+      every habitat is an adventure, and every goodbye
+      deserves to be remembered.
+    </div>
+  </section>
+
+  <div class="slogan-banner">
+    <h2>Cedar Valley Zoo: Always Caring</h2>
+    <p>Celebrating wildlife, one animal at a time. 🌿</p>
+  </div>
+
+  <section id="animals">
+    <div class="section-heading">
+      <h2>🐾 Meet Our Animals</h2>
+      <p>Discover the residents of Cedar Valley Zoo.</p>
+    </div>
+
+    <div class="animal-grid">
+
+      <article class="card">
+        <div class="photo-placeholder">
+          🦜<br>Our Aviary
+        </div>
+        <div class="card-content">
+          <h3>Our Aviary</h3>
+          <p>
+            Our first big project in Planet Zoo 2!
+            Discover our collection of birds and the
+            special home built for them.
+          </p>
+          <p><strong>Habitat:</strong> Aviary</p>
+          <p><strong>Status:</strong> Open in our zoo project!</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo-placeholder">
+          🌳<br>More animals coming soon
+        </div>
+        <div class="card-content">
+          <h3>The Next Chapter</h3>
+          <p>
+            Our collection will grow as new habitats
+            are created. Check back to discover
+            more of our amazing residents.
+          </p>
+          <p><strong>Status:</strong> Future additions</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="small">
+      This directory will expand as more animals are
+      added to Cedar Valley Zoo.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <div class="section-heading">
+      <h2>📸 Zoo Gallery</h2>
+      <p>Memories from our Planet Zoo 2 adventure.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <article class="card">
+        <div class="photo-placeholder">
+          🦜<br>Aviary Adventure
+        </div>
+        <div class="card-content">
+          <h3>The Aviary</h3>
+          <p>Our first major zoo project.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo-placeholder">
+          📷<br>Your screenshots go here
+        </div>
+        <div class="card-content">
+          <h3>More Zoo Memories</h3>
+          <p>
+            A growing collection of habitats,
+            animal portraits and favourite moments.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="goodbyes">
+    <div class="section-heading">
+      <h2>💚 Goodbyes</h2>
+      <p>Every animal and every team member matters.</p>
+    </div>
+
+    <p>
+      Sometimes animals leave our zoo for new homes,
+      and sometimes members of our team move on to
+      their next adventure. We want to remember them
+      with kindness and respect.
+    </p>
+
+    <div class="notice">
+      <h3>Remembering Our Residents</h3>
+      <p>
+        This section will hold animal names, photos,
+        departure dates and special stories about
+        animals released or transferred from the zoo.
+      </p>
+      <h3>Thank You to Our Team</h3>
+      <p>
+        We'll also celebrate retiring staff members
+        and the care they gave to our zoo.
+      </p>
+      <p><em>No good story is ever forgotten.</em></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <h2>🌿 Cedar Valley Zoo</h2>
+  <p><strong>Always Caring.</strong></p>
+  <p>Created by Shadow Bonnie in Planet Zoo 2.</p>
+  <p class="small">
+    An independent fan-made zoo website.
+    Planet Zoo 2 and related trademarks belong
+    to their respective owners.
+  </p>
+  <a href="#home">Back to the top ↑</a>
+</footer>
+
+</body>
+</html>
