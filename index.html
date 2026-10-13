@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cedar Valley Zoo | Always Caring</title>
 
 <style>
@@ -72,7 +70,7 @@ nav a {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
 
 nav a:hover {
@@ -80,15 +78,13 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 340px;
   padding: 65px 20px;
   text-align: center;
   color: white;
-  background:
-    linear-gradient(
-      rgba(15, 49, 30, 0.76),
-      rgba(15, 49, 30, 0.86)
-    );
+  background: linear-gradient(
+    rgba(15, 49, 30, .92),
+    rgba(15, 49, 30, .84)
+  );
 }
 
 .hero h2 {
@@ -160,17 +156,21 @@ section {
   background: white;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(30, 55, 35, 0.12);
+  box-shadow: 0 4px 14px rgba(30, 55, 35, .12);
   border: 1px solid #e2e7dd;
+}
+
+.animal-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #dbe9d4;
 }
 
 .photo-placeholder {
   min-height: 165px;
-  background: linear-gradient(
-    135deg,
-    #dbe9d4,
-    #a7c49a
-  );
+  background: linear-gradient(135deg, #dbe9d4, #a7c49a);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,7 +209,7 @@ section {
   color: var(--forest);
   border-radius: 20px;
   padding: 4px 10px;
-  font-size: 0.85rem;
+  font-size: .85rem;
   font-weight: bold;
   margin-top: 5px;
 }
@@ -233,6 +233,11 @@ section {
   margin-top: 0;
 }
 
+.small {
+  font-size: .9rem;
+  opacity: .85;
+}
+
 footer {
   background: var(--forest);
   color: white;
@@ -248,11 +253,6 @@ footer p {
   margin: 6px 0;
 }
 
-.small {
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
 @media (max-width: 480px) {
   nav {
     gap: 2px;
@@ -260,7 +260,7 @@ footer p {
 
   nav a {
     padding: 7px 9px;
-    font-size: 0.88rem;
+    font-size: .88rem;
   }
 
   section {
@@ -312,8 +312,7 @@ footer p {
     <p>
       Welcome to Cedar Valley Zoo, our Planet Zoo 2 creation!
       Our aim is to create wonderful habitats where animals
-      can thrive while visitors learn more about the natural
-      world.
+      can thrive while visitors learn about the natural world.
     </p>
     <p>
       From colourful birds to magnificent mammals, every
@@ -340,23 +339,21 @@ footer p {
   <div class="animal-grid">
 
     <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🦜</span>
-        Toco Toucan
-      </div>
+      <img class="animal-photo"
+           src="1a13640e6cf9-screenshotUrl.jpg"
+           alt="Toco Toucan at Cedar Valley Zoo">
       <div class="card-content">
         <h3>Toco Toucan</h3>
         <p>
           The Toco Toucan is famous for its enormous orange
-          beak, which makes it one of the most recognisable
-          birds in the world. Despite its size, the beak is
-          surprisingly lightweight.
+          beak. Despite its size, the beak is surprisingly
+          lightweight. This bird lives in South America and
+          spends much of its time among the trees.
         </p>
         <p>
-          Toco Toucans live in South America, where they
-          spend much of their time in trees. They use their
-          long beaks to reach fruit and help spread seeds
-          through the forest.
+          Its long beak helps it reach fruit, and it plays
+          an important role in spreading seeds through
+          tropical environments.
         </p>
         <p><strong>Habitat:</strong> Tropical forest</p>
         <p><strong>Diet:</strong> Mainly fruit</p>
@@ -365,23 +362,20 @@ footer p {
     </article>
 
     <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🐦</span>
-        Javan Green Magpie
-      </div>
+      <img class="animal-photo"
+           src="1a13640a8ce55-screenshotUrl.jpg"
+           alt="Javan Green Magpie at Cedar Valley Zoo">
       <div class="card-content">
         <h3>Javan Green Magpie</h3>
         <p>
-          The Javan Green Magpie is a striking bird native
-          to the forests of Java, Indonesia. Its bright
-          green feathers and dark facial markings give
-          it a distinctive appearance.
+          Native to the forests of Java, Indonesia, the
+          Javan Green Magpie is known for its vivid green
+          plumage and striking dark facial markings.
         </p>
         <p>
-          These intelligent birds are members of the crow
-          family. They need a complex environment with
-          plenty of opportunities to explore and search
-          for food.
+          These intelligent members of the crow family
+          benefit from complex habitats where they can
+          explore, perch and search for food.
         </p>
         <p><strong>Habitat:</strong> Tropical forest</p>
         <p><strong>Diet:</strong> Invertebrates and small animals</p>
@@ -390,23 +384,20 @@ footer p {
     </article>
 
     <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🦜</span>
-        Long-tailed Parakeet
-      </div>
+      <img class="animal-photo"
+           src="1a13640c8da22-screenshotUrl.jpg"
+           alt="Long-tailed Parakeet at Cedar Valley Zoo">
       <div class="card-content">
         <h3>Long-tailed Parakeet</h3>
         <p>
           The Long-tailed Parakeet is a colourful parrot
-          from Southeast Asia. As its name suggests,
-          it has a long tail that helps give it an
-          elegant shape in flight.
+          from Southeast Asia. Its long tail gives it an
+          elegant shape as it moves between branches.
         </p>
         <p>
-          These active birds spend time climbing,
-          perching and searching for food. A good
-          habitat gives them space to move around and
-          plenty to investigate.
+          Active and curious, these birds benefit from
+          space to climb, perch and explore their
+          surroundings.
         </p>
         <p><strong>Habitat:</strong> Forest and woodland</p>
         <p><strong>Diet:</strong> Fruit, seeds and plant matter</p>
@@ -415,23 +406,20 @@ footer p {
     </article>
 
     <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🐦</span>
-        Great Hornbill
-      </div>
+      <img class="animal-photo"
+           src="1a1364088e513-screenshotUrl.jpg"
+           alt="Great Hornbill at Cedar Valley Zoo">
       <div class="card-content">
         <h3>Great Hornbill</h3>
         <p>
-          The Great Hornbill is a magnificent bird with
-          a huge curved bill and a prominent casque
-          on top. It is native to forests across parts
-          of South and Southeast Asia.
+          The Great Hornbill is a magnificent forest bird
+          with a huge curved bill and a distinctive casque
+          on top. It lives in parts of South and Southeast Asia.
         </p>
         <p>
-          Great Hornbills are important seed dispersers.
-          After eating fruit, they can carry seeds far
-          from the original tree, helping forests
-          regenerate.
+          Great Hornbills help forests regenerate by
+          spreading seeds after eating fruit. They are
+          an important part of their forest ecosystems.
         </p>
         <p><strong>Habitat:</strong> Tropical forest</p>
         <p><strong>Diet:</strong> Mainly fruit, plus small animals</p>
@@ -479,8 +467,8 @@ footer p {
       <div class="card-content">
         <h3>The Aviary</h3>
         <p>
-          Meet our colourful bird residents and
-          discover the world they come from.
+          Meet our colourful bird residents and discover
+          the world they come from.
         </p>
       </div>
     </article>
@@ -493,17 +481,16 @@ footer p {
       <div class="card-content">
         <h3>More Memories</h3>
         <p>
-          This gallery will grow with screenshots
-          and special moments from our zoo.
+          This gallery will grow with screenshots and
+          special moments from our zoo.
         </p>
       </div>
     </article>
   </div>
 
   <p class="gallery-note">
-    📷 These are placeholders for now.
-    We can add your actual Planet Zoo 2 screenshots
-    when you're ready!
+    Our gallery will grow as we capture more moments
+    from Cedar Valley Zoo!
   </p>
 </section>
 
@@ -525,12 +512,11 @@ footer p {
     </p>
     <p>
       We can add names, photographs, dates and special
-      stories here whenever we have a goodbye to share.
+      stories whenever we have a goodbye to share.
     </p>
     <p>
       <strong>
-        They will always be part of the Cedar Valley
-        Zoo family.
+        They will always be part of the Cedar Valley Zoo family.
       </strong>
     </p>
   </div>
