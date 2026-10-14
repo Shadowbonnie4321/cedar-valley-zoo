@@ -80,7 +80,8 @@ h2 {
 }
 
 .animal-grid,
-.gallery-grid {
+.gallery-grid,
+.staff-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
@@ -116,6 +117,35 @@ h2 {
 
 .gallery-grid .card img {
     height: 230px;
+}
+
+.staff-card {
+    text-align: center;
+    padding: 24px 18px;
+    border-top: 5px solid #47794c;
+}
+
+.staff-icon {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.staff-role {
+    color: #47794c;
+    font-weight: bold;
+}
+
+.award-card {
+    margin-top: 25px;
+    background: #fff8dc;
+    border: 2px solid #d7b84b;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.award-card h3 {
+    color: #806313;
 }
 
 footer {
@@ -161,6 +191,7 @@ footer p {
     <a href="#about">About</a>
     <a href="#animals">Animals</a>
     <a href="#gallery">Gallery</a>
+    <a href="#staff">Staff</a>
     <a href="#goodbyes">Goodbyes</a>
 </nav>
 
@@ -396,6 +427,51 @@ footer p {
     </div>
 </section>
 
+<!-- STAFF SECTION -->
+<section id="staff">
+    <h2>👥 Meet the Cedar Valley Zoo Team</h2>
+
+    <p class="intro">
+        Meet the people behind Cedar Valley Zoo!
+        Our team works to care for our animals and help the zoo grow.
+    </p>
+
+    <div class="staff-grid">
+
+        <div class="card staff-card">
+            <div class="staff-icon">👑🐰</div>
+            <div class="card-content">
+                <h3>Shadow Bonnie</h3>
+                <p class="staff-role">Zoo Director &amp; Founder</p>
+                <p><strong>About them:</strong></p>
+                <p>
+                    Shadow Bonnie founded Cedar Valley Zoo and leads its
+                    future. They oversee the animals, the staff and the
+                    development of the zoo, helping make it a special
+                    place for wildlife.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="award-card">
+        <h3>🏆 Employee of the Month</h3>
+        <p>
+            <strong>Coming soon!</strong>
+        </p>
+        <p>
+            We'll celebrate an outstanding member of the Cedar Valley
+            Zoo team here when the first award is decided.
+        </p>
+    </div>
+
+    <p class="intro">
+        💼 Doug has not been hired yet, so he is not listed as a member
+        of the staff.
+    </p>
+</section>
+
 <section id="goodbyes">
     <h2>💚 Goodbyes</h2>
 
@@ -413,4 +489,4 @@ footer p {
 </footer>
 
 </body>
-</html>
+    </html>
