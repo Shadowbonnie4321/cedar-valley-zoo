@@ -2,274 +2,204 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cedar Valley Zoo | Always Caring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cedar Valley Zoo</title>
 
 <style>
-:root {
-  --forest: #183f2b;
-  --green: #2f6845;
-  --light-green: #e8f0e4;
-  --gold: #e5bd68;
-  --cream: #faf8ef;
-  --brown: #6c4b32;
-  --text: #26372b;
-}
-
 * {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.7;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f0e5;
+    color: #263b29;
 }
 
 header {
-  background: var(--forest);
-  color: white;
-  text-align: center;
-  padding: 30px 16px 24px;
-}
-
-.logo {
-  font-size: 3rem;
-  margin: 0;
+    background: #244b32;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
 }
 
 header h1 {
-  margin: 5px 0;
-  font-size: clamp(2rem, 7vw, 3.3rem);
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-.slogan {
-  color: var(--gold);
-  font-size: 1.15rem;
-  font-weight: bold;
-  margin: 5px 0 18px;
+header p {
+    font-size: 1.15rem;
+    margin-bottom: 0;
 }
 
 nav {
-  background: #102d1e;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 12px 8px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    background: #173923;
+    padding: 14px 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: .95rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-  background: var(--green);
+    color: #c8e6a0;
 }
 
 .hero {
-  padding: 65px 20px;
-  text-align: center;
-  color: white;
-  background: linear-gradient(
-    rgba(15, 49, 30, .92),
-    rgba(15, 49, 30, .84)
-  );
+    background: linear-gradient(
+        rgba(20, 55, 32, 0.65),
+        rgba(20, 55, 32, 0.65)
+    );
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
 }
 
 .hero h2 {
-  font-size: clamp(2rem, 7vw, 3.5rem);
-  margin: 0 auto 15px;
-  max-width: 800px;
-  line-height: 1.2;
+    font-size: 2rem;
 }
 
 .hero p {
-  max-width: 650px;
-  margin: 0 auto 20px;
-  font-size: 1.1rem;
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.7;
 }
 
-.hero a {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--forest);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 22px;
-  border-radius: 25px;
-  margin-top: 10px;
+.button {
+    display: inline-block;
+    background: #d5e8a5;
+    color: #203e28;
+    text-decoration: none;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #ffffff;
 }
 
 section {
-  padding: 45px 18px;
-  max-width: 1100px;
-  margin: auto;
-  scroll-margin-top: 65px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #244b32;
+    margin-bottom: 15px;
 }
 
-.section-heading h2 {
-  color: var(--forest);
-  font-size: clamp(1.7rem, 5vw, 2.4rem);
-  margin-bottom: 5px;
+.section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
 }
 
-.section-heading p {
-  max-width: 700px;
-  margin: 0 auto;
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 22px;
 }
 
-.about-box {
-  background: var(--light-green);
-  border-left: 5px solid var(--green);
-  border-radius: 12px;
-  padding: 22px;
+.animal-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
 }
 
-.animal-grid,
-.gallery-grid,
-.goodbye-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 245px), 1fr)
-  );
-  gap: 22px;
+.animal-card:hover {
+    transform: translateY(-4px);
 }
 
-.card {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(30, 55, 35, .12);
-  border: 1px solid #e2e7dd;
+.animal-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    background: #dfe7d8;
 }
 
-.animal-photo {
-  display: block;
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  background: #dbe9d4;
+.animal-card h3 {
+    color: #244b32;
+    margin: 15px 15px 8px;
 }
 
-.photo-placeholder {
-  min-height: 165px;
-  background: linear-gradient(135deg, #dbe9d4, #a7c49a);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 18px;
-  color: var(--forest);
-  font-weight: bold;
-  font-size: 1.05rem;
+.animal-card p {
+    margin: 0 15px 18px;
+    line-height: 1.5;
 }
 
-.photo-placeholder .emoji {
-  font-size: 4rem;
-  line-height: 1.3;
-  margin-bottom: 8px;
+.info-box {
+    background: #e0e8d6;
+    border-left: 5px solid #50764b;
+    border-radius: 8px;
+    padding: 22px;
+    line-height: 1.7;
 }
 
-.card-content {
-  padding: 18px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
 }
 
-.card-content h3 {
-  color: var(--forest);
-  margin: 0 0 10px;
-  font-size: 1.3rem;
-  line-height: 1.35;
-}
-
-.card-content p {
-  margin: 9px 0;
-}
-
-.tag {
-  display: inline-block;
-  background: var(--light-green);
-  color: var(--forest);
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-size: .85rem;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.gallery-note {
-  text-align: center;
-  background: #f0e8d7;
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.goodbye-card {
-  background: white;
-  border-radius: 12px;
-  padding: 22px;
-  border-top: 4px solid var(--brown);
-}
-
-.goodbye-card h3 {
-  color: var(--brown);
-  margin-top: 0;
-}
-
-.small {
-  font-size: .9rem;
-  opacity: .85;
+.gallery-item {
+    background: #e0e8d6;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 footer {
-  background: var(--forest);
-  color: white;
-  text-align: center;
-  padding: 28px 16px;
-}
-
-footer strong {
-  color: var(--gold);
+    background: #173923;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
 }
 
 footer p {
-  margin: 6px 0;
+    margin: 8px;
 }
 
-@media (max-width: 480px) {
-  nav {
-    gap: 2px;
-  }
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-  nav a {
-    padding: 7px 9px;
-    font-size: .88rem;
-  }
+    .hero {
+        padding: 45px 15px;
+    }
 
-  section {
-    padding: 35px 14px;
-  }
-
-  .hero {
-    padding: 50px 16px;
-  }
+    section {
+        padding: 30px 15px;
+    }
 }
 </style>
 </head>
@@ -277,614 +207,316 @@ footer p {
 <body>
 
 <header id="home">
-  <p class="logo">🌳🦜</p>
-  <h1>Cedar Valley Zoo</h1>
-  <p class="slogan">Always Caring</p>
-  <p>A world of wildlife, wonder and conservation.</p>
+    <h1>🌿 Cedar Valley Zoo 🌿</h1>
+    <p><strong>Always Caring</strong></p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#animals">Animals</a>
-  <a href="#aquarium">Aquarium</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#goodbyes">Goodbyes</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#animals">Animals</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#goodbyes">Goodbyes</a>
 </nav>
 
 <div class="hero">
-  <h2>Welcome to Cedar Valley Zoo!</h2>
-  <p>
-    Discover amazing animals, explore beautiful habitats
-    and celebrate the wildlife that makes our world special.
-    Every animal has a story, and every story matters.
-  </p>
-  <a href="#animals">Meet Our Animals 🐾</a>
-  <br>
-  <a href="#aquarium">Explore Our Aquarium 🐠</a>
+    <h2>Welcome to Cedar Valley Zoo!</h2>
+
+    <p>
+        Discover incredible animals, explore their habitats,
+        and celebrate the amazing wildlife that shares our planet.
+        Every animal matters, and every animal deserves care.
+    </p>
+
+    <a class="button" href="#animals">Meet Our Animals</a>
+    <a class="button" href="#gallery">Explore the Gallery</a>
 </div>
 
 <section id="about">
-  <div class="section-heading">
-    <h2>🌿 About Our Zoo</h2>
-    <p>A home for wildlife and a place for discovery.</p>
-  </div>
+    <h2>🌱 About Our Zoo</h2>
 
-  <div class="about-box">
-    <h3>Our Mission: Always Caring</h3>
-    <p>
-      Welcome to Cedar Valley Zoo, our Planet Zoo 2 creation!
-      Our aim is to create wonderful habitats where animals
-      can thrive while visitors learn about the natural world.
+    <p class="section-intro">
+        Cedar Valley Zoo is a place to discover wildlife,
+        appreciate nature, and celebrate the animals that
+        make our world special.
     </p>
-    <p>
-      From colourful birds to magnificent mammals, every
-      resident deserves care, respect and a habitat designed
-      around its needs.
-    </p>
-    <p>
-      We want every visit to inspire curiosity, kindness
-      towards animals and a love of conservation.
-    </p>
-    <p><strong>Cedar Valley Zoo: Always Caring.</strong></p>
-  </div>
+
+    <div class="info-box">
+        <h3>Our Mission</h3>
+
+        <p>
+            We believe that every animal deserves respect,
+            care, and a suitable environment. Our zoo celebrates
+            biodiversity and inspires visitors to appreciate
+            the natural world.
+        </p>
+
+        <p>
+            From colourful birds to fascinating reptiles and
+            amazing aquatic animals, there is always something
+            new to discover at Cedar Valley Zoo.
+        </p>
+
+        <strong>Cedar Valley Zoo: Always Caring.</strong>
+    </div>
 </section>
 
 <section id="animals">
-  <div class="section-heading">
     <h2>🐾 Meet Our Animals</h2>
-    <p>
-      Get to know the amazing residents of Cedar Valley Zoo.
-      From our colourful aviary to our reptile residents,
-      our collection will grow as we build new habitats!
+
+    <p class="section-intro">
+        Welcome to our animal directory! Explore our birds,
+        mammals, reptiles, amphibians, invertebrates, and
+        aquatic animals. All our animals are together in
+        this one section.
     </p>
-  </div>
 
-  <div class="animal-grid">
+    <div class="animal-grid">
 
-    <!-- TOCO TOUCAN -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13640e6cf9-screenshotUrl.jpg"
-           alt="Toco Toucan at Cedar Valley Zoo">
-      <div class="card-content">
-        <h3>Toco Toucan</h3>
-        <p>
-          The Toco Toucan is famous for its enormous orange
-          beak. Despite its size, the beak is surprisingly
-          lightweight. This bird lives in South America and
-          spends much of its time among the trees.
-        </p>
-        <p>
-          Its long beak helps it reach fruit, and it plays
-          an important role in spreading seeds through
-          tropical environments.
-        </p>
-        <p><strong>Habitat:</strong> Tropical forest</p>
-        <p><strong>Diet:</strong> Mainly fruit</p>
-        <span class="tag">Our Aviary</span>
-      </div>
-    </article>
+        <!-- BIRDS -->
 
-    <!-- JAVAN GREEN MAGPIE -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13640a8ce55-screenshotUrl.jpg"
-           alt="Javan Green Magpie at Cedar Valley Zoo">
-      <div class="card-content">
-        <h3>Javan Green Magpie</h3>
-        <p>
-          Native to the forests of Java, Indonesia, the
-          Javan Green Magpie is known for its vivid green
-          plumage and striking dark facial markings.
-        </p>
-        <p>
-          These intelligent members of the crow family
-          benefit from complex habitats where they can
-          explore, perch and search for food.
-        </p>
-        <p><strong>Habitat:</strong> Tropical forest</p>
-        <p><strong>Diet:</strong> Invertebrates and small animals</p>
-        <span class="tag">Our Aviary</span>
-      </div>
-    </article>
+        <article class="animal-card">
+            <img
+                src="1a13640e6cf9-screenshotUrl.jpg"
+                alt="Toco Toucan"
+                loading="lazy"
+            >
+            <h3>Toco Toucan</h3>
+            <p>
+                A spectacular tropical bird recognised for
+                its enormous, colourful bill.
+            </p>
+        </article>
 
-    <!-- LONG-TAILED PARAKEET -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13640c8da22-screenshotUrl.jpg"
-           alt="Long-tailed Parakeet at Cedar Valley Zoo">
-      <div class="card-content">
-        <h3>Long-tailed Parakeet</h3>
-        <p>
-          The Long-tailed Parakeet is a colourful parrot
-          from Southeast Asia. Its long tail gives it an
-          elegant shape as it moves between branches.
-        </p>
-        <p>
-          Active and curious, these birds benefit from
-          space to climb, perch and explore their
-          surroundings.
-        </p>
-        <p><strong>Habitat:</strong> Forest and woodland</p>
-        <p><strong>Diet:</strong> Fruit, seeds and plant matter</p>
-        <span class="tag">Our Aviary</span>
-      </div>
-    </article>
+        <article class="animal-card">
+            <img
+                src="1a13640a8ce55-screenshotUrl.jpg"
+                alt="Javan Green Magpie"
+                loading="lazy"
+            >
+            <h3>Javan Green Magpie</h3>
+            <p>
+                A striking green forest bird native to Java
+                in Indonesia.
+            </p>
+        </article>
 
-    <!-- GREAT HORNBILL -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a1364088e513-screenshotUrl.jpg"
-           alt="Great Hornbill at Cedar Valley Zoo">
-      <div class="card-content">
-        <h3>Great Hornbill</h3>
-        <p>
-          The Great Hornbill is a magnificent forest bird
-          with a huge curved bill and a distinctive casque
-          on top. It lives in parts of South and Southeast Asia.
-        </p>
-        <p>
-          Great Hornbills help forests regenerate by
-          spreading seeds after eating fruit. They are
-          an important part of their forest ecosystems.
-        </p>
-        <p><strong>Habitat:</strong> Tropical forest</p>
-        <p><strong>Diet:</strong> Mainly fruit, plus small animals</p>
-        <span class="tag">Our Aviary</span>
-      </div>
-    </article>
+        <article class="animal-card">
+            <img
+                src="1a13640c8da22-screenshotUrl.jpg"
+                alt="Long-tailed Parakeet"
+                loading="lazy"
+            >
+            <h3>Long-tailed Parakeet</h3>
+            <p>
+                A colourful parakeet with a distinctive
+                long tail.
+            </p>
+        </article>
 
-    <!-- HAWKSBILL SEA TURTLE -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a136bcbbb898-screenshotUrl.jpg"
-           alt="Hawksbill Sea Turtle at Cedar Valley Zoo">
-      <div class="card-content">
-        <h3>Hawksbill Sea Turtle</h3>
-        <p>
-          The Hawksbill Sea Turtle is a beautiful marine
-          reptile named for its narrow, pointed beak,
-          which resembles a hawk's bill. Its shell has
-          overlapping scales and patterns of amber, brown and gold.
-        </p>
-        <p>
-          Hawksbill Sea Turtles are especially associated
-          with tropical coral reefs. Their narrow beaks
-          help them reach food hidden in reef crevices.
-          They feed mainly on sponges, helping maintain
-          the balance of coral reef ecosystems.
-        </p>
-        <p>
-          These turtles travel through warm ocean waters
-          and return to beaches to lay their eggs.
-          Protecting nesting beaches, coral reefs and
-          ocean habitats is essential for their future.
-        </p>
-        <p><strong>Habitat:</strong> Tropical oceans and coral reefs</p>
-        <p><strong>Diet:</strong> Mainly marine sponges</p>
-        <p><strong>Conservation:</strong> Critically Endangered</p>
-        <span class="tag">Our Aquarium</span>
-      </div>
-    </article>
+        <article class="animal-card">
+            <img
+                src="1a1364088e513-screenshotUrl.jpg"
+                alt="Great Hornbill"
+                loading="lazy"
+            >
+            <h3>Great Hornbill</h3>
+            <p>
+                A magnificent forest bird with a large,
+                impressive bill and casque.
+            </p>
+        </article>
 
-    <!-- MOON JELLY -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a136e69e9076-screenshotUrl.jpg"
-           alt="Moon Jelly at Cedar Valley Zoo">
+        <article class="animal-card">
+            <img
+                src="1a13afb5e1c95-screenshotUrl.jpg"
+                alt="Secretary Bird"
+                loading="lazy"
+            >
+            <h3>Secretary Bird</h3>
+            <p>
+                A remarkable African bird of prey with
+                long legs, a distinctive crest, and a
+                famous snake-stomping hunting technique.
+            </p>
+        </article>
 
-      <div class="card-content">
-        <h3>Moon Jelly</h3>
-        <p>
-          The Moon Jelly is a graceful jellyfish known
-          for its translucent, saucer-shaped bell.
-          Four horseshoe-shaped structures can often
-          be seen through the top of its delicate body.
-        </p>
-        <p>
-          Moon Jellies drift through the water and pulse
-          their bells to help them move. Their bodies
-          are mostly made of water, giving them their
-          delicate, almost see-through appearance.
-        </p>
-        <p>
-          These jellyfish feed on tiny drifting animals,
-          plankton and other small food particles.
-          They use their short tentacles and other
-          structures to capture food from the water.
-        </p>
-        <p>
-          Moon Jellies can be found in coastal waters
-          in many parts of the world. They are fascinating
-          animals that show how diverse marine life can be.
-        </p>
-        <p><strong>Habitat:</strong> Coastal seas and ocean waters</p>
-        <p><strong>Diet:</strong> Plankton and tiny marine animals</p>
-        <p><strong>Animal group:</strong> Jellyfish</p>
-        <span class="tag">Our Aquarium</span>
-        <span class="tag">NEW RESIDENT!</span>
-      </div>
-    </article>
+        <!-- MAMMALS -->
 
-    <!-- KOMODO DRAGON -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a1391fea2553-screenshotUrl.jpg"
-           alt="Komodo Dragon at Cedar Valley Zoo">
+        <article class="animal-card">
+            <img
+                src="1a13afbaa9785-screenshotUrl.jpg"
+                alt="Wild Boar"
+                loading="lazy"
+            >
+            <h3>Wild Boar</h3>
+            <p>
+                A powerful wild pig with a sturdy body,
+                a strong snout, and impressive tusks.
+            </p>
+        </article>
 
-      <div class="card-content">
-        <h3>Komodo Dragon</h3>
-        <p>
-          The Komodo Dragon is the largest living lizard
-          in the world! This impressive reptile is native
-          to several Indonesian islands.
-        </p>
-        <p>
-          It has a powerful body, strong legs, sharp claws
-          and a long tail. Its forked tongue helps it
-          detect scents in its surroundings.
-        </p>
-        <p>
-          Komodo Dragons are carnivores. They hunt and
-          scavenge for food, using their powerful jaws
-          and sharp, serrated teeth.
-        </p>
-        <p>
-          These remarkable reptiles face threats from
-          habitat changes and other environmental pressures.
-          Protecting their natural homes is important
-          for their future.
-        </p>
-        <p><strong>Habitat:</strong> Tropical dry forests and savannas</p>
-        <p><strong>Diet:</strong> Carnivore</p>
-        <p><strong>Native range:</strong> Indonesian islands</p>
-        <p><strong>Conservation:</strong> Endangered</p>
-        <span class="tag">Our Reptile House</span>
-        <span class="tag">NEW RESIDENT!</span>
-      </div>
-    </article>
+        <!-- REPTILES -->
 
-  </div>
+        <article class="animal-card">
+            <img
+                src="1a136bcbbb898-screenshotUrl.jpg"
+                alt="Hawksbill Sea Turtle"
+                loading="lazy"
+            >
+            <h3>Hawksbill Sea Turtle</h3>
+            <p>
+                A critically endangered marine turtle
+                known for its beautiful patterned shell
+                and pointed beak.
+            </p>
+        </article>
 
-  <p class="small">
-    Animal information is provided for educational purposes.
-    Our collection will expand as Cedar Valley Zoo grows.
-  </p>
-</section>
+        <article class="animal-card">
+            <img
+                src="1a1391fea2553-screenshotUrl.jpg"
+                alt="Komodo Dragon"
+                loading="lazy"
+            >
+            <h3>Komodo Dragon</h3>
+            <p>
+                The world's largest living lizard,
+                native to several Indonesian islands.
+            </p>
+        </article>
 
-<!-- AQUARIUM SECTION -->
-<section id="aquarium">
+        <!-- AQUATIC ANIMALS -->
 
-  <div class="section-heading">
-    <h2>🌊 The Cedar Valley Aquarium</h2>
-    <p>
-      Dive into an underwater world of colourful reef fish,
-      graceful marine animals and fascinating ocean life!
-      Meet our newest aquatic residents below.
-    </p>
-  </div>
+        <article class="animal-card">
+            <img
+                src="1a136e69e9076-screenshotUrl.jpg"
+                alt="Moon Jelly"
+                loading="lazy"
+            >
+            <h3>Moon Jelly</h3>
+            <p>
+                A delicate jellyfish with a translucent
+                bell that drifts through the water.
+            </p>
+        </article>
 
-  <div class="animal-grid">
+        <article class="animal-card">
+            <img
+                src="1a13abc631943-screenshotUrl.jpg"
+                alt="Clown Anemonefish"
+                loading="lazy"
+            >
+            <h3>Clown Anemonefish</h3>
+            <p>
+                A bright orange reef fish with white
+                bands that lives among sea anemones.
+            </p>
+        </article>
 
-    <!-- HAWKSBILL SEA TURTLE: AQUARIUM FEATURE -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a136bcbbb898-screenshotUrl.jpg"
-           alt="Hawksbill Sea Turtle swimming in the ocean">
+        <article class="animal-card">
+            <img
+                src="1a13abc75fd28-screenshotUrl.jpg"
+                alt="Blue Tang"
+                loading="lazy"
+            >
+            <h3>Blue Tang</h3>
+            <p>
+                A vivid blue tropical reef fish with
+                a distinctive shape and yellow tail.
+            </p>
+        </article>
 
-      <div class="card-content">
-        <h3>🐢 Hawksbill Sea Turtle</h3>
-        <p>
-          The Hawksbill Sea Turtle is a marine reptile
-          associated with tropical coral reefs. Its narrow
-          beak helps it reach food hidden in reef crevices.
-        </p>
-        <p>
-          Protecting coral reefs and nesting beaches is
-          important for the survival of this endangered turtle.
-        </p>
-        <p><strong>Habitat:</strong> Tropical coral reefs</p>
-        <p><strong>Diet:</strong> Mainly marine sponges</p>
-        <span class="tag">Aquarium Resident</span>
-      </div>
-    </article>
+        <article class="animal-card">
+            <img
+                src="1a13abc85bf24-screenshotUrl.jpg"
+                alt="Red Lionfish"
+                loading="lazy"
+            >
+            <h3>Red Lionfish</h3>
+            <p>
+                A striking marine fish with red-and-white
+                stripes and long venomous spines.
+            </p>
+        </article>
 
-    <!-- MOON JELLY: AQUARIUM FEATURE -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a136e69e9076-screenshotUrl.jpg"
-           alt="Translucent Moon Jelly">
-
-      <div class="card-content">
-        <h3>🌙 Moon Jelly</h3>
-        <p>
-          With its translucent bell and delicate movements,
-          the Moon Jelly is one of the most graceful
-          residents of our aquarium.
-        </p>
-        <p>
-          It pulses through the water and feeds on plankton
-          and tiny marine animals.
-        </p>
-        <p><strong>Habitat:</strong> Coastal seas</p>
-        <p><strong>Diet:</strong> Plankton and tiny marine animals</p>
-        <span class="tag">Aquarium Resident</span>
-      </div>
-    </article>
-
-    <!-- NEW: CLOWN ANEMONEFISH -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13abc631943-screenshotUrl.jpg"
-           alt="Clown Anemonefish at Cedar Valley Zoo">
-
-      <div class="card-content">
-        <h3>🐠 Clown Anemonefish</h3>
-
-        <p>
-          The Clown Anemonefish is a bright reef fish
-          recognised by its orange body and distinctive
-          white bands outlined in black.
-        </p>
-
-        <p>
-          It lives among sea anemones, whose stinging
-          tentacles provide protection. In return, the fish
-          can help keep its host anemone clean and may
-          defend it from certain threats.
-        </p>
-
-        <p>
-          Clown Anemonefish are fascinating examples
-          of cooperation between different species
-          in tropical coral reef ecosystems.
-        </p>
-
-        <p><strong>Habitat:</strong> Tropical coral reefs</p>
-        <p><strong>Diet:</strong> Small invertebrates and algae</p>
-        <p><strong>Native range:</strong> Indo-Pacific region</p>
-
-        <span class="tag">Reef Fish</span>
-        <span class="tag">NEW RESIDENT!</span>
-      </div>
-    </article>
-
-    <!-- NEW: BLUE TANG -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13abc75fd28-screenshotUrl.jpg"
-           alt="Blue Tang at Cedar Valley Zoo">
-
-      <div class="card-content">
-        <h3>💙 Blue Tang</h3>
-
-        <p>
-          The Blue Tang is a striking reef fish with
-          a vivid blue body, dark markings and a bright
-          yellow tail. Its colourful appearance makes it
-          a favourite among many ocean enthusiasts.
-        </p>
-
-        <p>
-          Blue Tangs are active swimmers that explore
-          coral reefs in search of food. They feed mainly
-          on algae, helping control algal growth and
-          contributing to the health of reef habitats.
-        </p>
-
-        <p>
-          Coral reefs provide food, shelter and places
-          for many marine species to live. Protecting
-          these environments benefits Blue Tangs and
-          countless other reef animals.
-        </p>
-
-        <p><strong>Habitat:</strong> Tropical coral reefs</p>
-        <p><strong>Diet:</strong> Mainly algae</p>
-        <p><strong>Native range:</strong> Indo-Pacific region</p>
-
-        <span class="tag">Reef Fish</span>
-        <span class="tag">NEW RESIDENT!</span>
-      </div>
-    </article>
-
-    <!-- NEW: RED LIONFISH -->
-    <article class="card">
-      <img class="animal-photo"
-           src="1a13abc85bf24-screenshotUrl.jpg"
-           alt="Red Lionfish at Cedar Valley Zoo">
-
-      <div class="card-content">
-        <h3>🦁 Red Lionfish</h3>
-
-        <p>
-          The Red Lionfish is a spectacular marine fish
-          with reddish-brown and white stripes, long
-          fan-like fins and distinctive spines.
-        </p>
-
-        <p>
-          Its striking fins help it appear larger and
-          can assist it when cornering prey. Its venomous
-          spines provide defence against potential predators.
-        </p>
-
-        <p>
-          Red Lionfish are predators that feed on smaller
-          fish and crustaceans. In parts of the western
-          Atlantic and Caribbean where they are invasive,
-          they can put pressure on native reef wildlife.
-        </p>
-
-        <p>
-          Lionfish must be handled carefully because
-          their venomous spines can cause painful injuries.
-        </p>
-
-        <p><strong>Habitat:</strong> Coral reefs and rocky marine habitats</p>
-        <p><strong>Diet:</strong> Small fish and crustaceans</p>
-        <p><strong>Native range:</strong> Indo-Pacific region</p>
-
-        <span class="tag">Reef Fish</span>
-        <span class="tag">Venomous Spines</span>
-        <span class="tag">NEW RESIDENT!</span>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="about-box" style="margin-top: 28px;">
-    <h3>🐠 Protecting Our Oceans</h3>
-    <p>
-      Coral reefs support an incredible diversity of life.
-      Pollution, climate change and damage to reef habitats
-      threaten marine ecosystems around the world.
-    </p>
-    <p>
-      At Cedar Valley Zoo, our aquarium celebrates the
-      fascinating animals that live in our oceans and
-      encourages everyone to care for the underwater world.
-    </p>
-    <p><strong>Cedar Valley Zoo: Always Caring. 🌊</strong></p>
-  </div>
-
+    </div>
 </section>
 
 <section id="gallery">
-  <div class="section-heading">
-    <h2>📸 Zoo Gallery</h2>
-    <p>
-      A place for our favourite moments and memories
-      from Cedar Valley Zoo.
+    <h2>📸 Our Gallery</h2>
+
+    <p class="section-intro">
+        A place to celebrate the animals, habitats,
+        and special moments of Cedar Valley Zoo.
     </p>
-  </div>
 
-  <div class="gallery-grid">
+    <div class="gallery-grid">
 
-    <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🌳</span>
-        Our Zoo
-      </div>
-      <div class="card-content">
-        <h3>Our Zoo</h3>
-        <p>
-          A growing home for wildlife, with new areas
-          and habitats to discover.
-        </p>
-      </div>
-    </article>
+        <div class="gallery-item">
+            <h3>🐦 Birds</h3>
+            <p>
+                Discover the amazing birds living at
+                Cedar Valley Zoo.
+            </p>
+        </div>
 
-    <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🦜</span>
-        The Aviary
-      </div>
-      <div class="card-content">
-        <h3>The Aviary</h3>
-        <p>
-          Meet our colourful bird residents and discover
-          the world they come from.
-        </p>
-      </div>
-    </article>
+        <div class="gallery-item">
+            <h3>🌿 Habitats</h3>
+            <p>
+                Explore the environments created for
+                our incredible animals.
+            </p>
+        </div>
 
-    <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">🐠</span>
-        The Aquarium
-      </div>
-      <div class="card-content">
-        <h3>Underwater Wonders</h3>
-        <p>
-          Explore our growing collection of reef fish,
-          jellyfish and marine animals.
-        </p>
-      </div>
-    </article>
+        <div class="gallery-item">
+            <h3>🌊 Aquatic Wildlife</h3>
+            <p>
+                Discover the fascinating animals living
+                in our collection of aquatic species.
+            </p>
+        </div>
 
-    <article class="card">
-      <div class="photo-placeholder">
-        <span class="emoji">📷</span>
-        More Memories
-      </div>
-      <div class="card-content">
-        <h3>More Memories</h3>
-        <p>
-          This gallery will grow with screenshots and
-          special moments from our zoo.
-        </p>
-      </div>
-    </article>
-
-  </div>
-
-  <p class="gallery-note">
-    Our gallery will grow as we capture more moments
-    from Cedar Valley Zoo!
-  </p>
+    </div>
 </section>
 
 <section id="goodbyes">
-  <div class="section-heading">
     <h2>💚 Goodbyes</h2>
-    <p>
-      Every animal and every member of our zoo family
-      leaves a mark on our story.
+
+    <p class="section-intro">
+        Every animal has a story, and every chapter matters.
     </p>
-  </div>
 
-  <div class="about-box">
-    <p>
-      Sometimes animals move to new homes, and sometimes
-      members of our team retire. This section will
-      celebrate their lives and remember the important
-      part they played at Cedar Valley Zoo.
-    </p>
-    <p>
-      We can add names, photographs, dates and special
-      stories whenever we have a goodbye to share.
-    </p>
-    <p>
-      <strong>
-        They will always be part of the Cedar Valley Zoo family.
-      </strong>
-    </p>
-  </div>
+    <div class="info-box">
+        <h3>Remembering Their Stories</h3>
 
-  <div class="goodbye-grid" style="margin-top: 22px;">
+        <p>
+            This section is dedicated to remembering animals
+            who leave Cedar Valley Zoo for new homes, new
+            opportunities, or other chapters in their lives.
+        </p>
 
-    <article class="goodbye-card">
-      <h3>🐾 Animal Goodbyes</h3>
-      <p>
-        Remembering animals who leave Cedar Valley Zoo
-        for a new home, with a story about their time
-        with us.
-      </p>
-      <p><strong>Our memories stay with us.</strong></p>
-    </article>
+        <p>
+            It can also celebrate staff members who retire
+            after contributing to the zoo.
+        </p>
 
-    <article class="goodbye-card">
-      <h3>🌿 Staff Farewells</h3>
-      <p>
-        Thanking the dedicated people who care for
-        our animals and remembering staff members
-        when they retire.
-      </p>
-      <p><strong>Thank you for always caring.</strong></p>
-    </article>
-
-  </div>
+        <p>
+            Their stories will always be part of Cedar Valley Zoo.
+        </p>
+    </div>
 </section>
 
 <footer>
-  <p>🌳🦜 <strong>Cedar Valley Zoo</strong> 🦜🌳</p>
-  <p><strong>Always Caring</strong></p>
-  <p>Created with care in Planet Zoo 2.</p>
-  <p class="small">
-    Celebrating wildlife, conservation and amazing animals.
-  </p>
+    <h2>🌿 Cedar Valley Zoo 🌿</h2>
+
+    <p><strong>Always Caring</strong></p>
+
+    <p>
+        Celebrating wildlife, caring for animals,
+        and inspiring a love of nature.
+    </p>
+
+    <p>&copy; 2026 Cedar Valley Zoo</p>
 </footer>
 
 </body>
