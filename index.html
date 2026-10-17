@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Cedar Valley Zoo</title>
 
 <style>
@@ -59,6 +59,24 @@ nav a {
 
 nav a:hover {
     background: #47794c;
+}
+
+/* ENTRANCE BANNER */
+.entrance-banner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto 0;
+    padding: 0 16px;
+}
+
+.entrance-banner img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
 
 section {
@@ -184,6 +202,10 @@ footer p {
         padding: 11px;
         font-size: 0.9em;
     }
+
+    .entrance-banner img {
+        height: 210px;
+    }
 }
 </style>
 </head>
@@ -204,6 +226,12 @@ footer p {
     <a href="#staff">Staff</a>
     <a href="#goodbyes">Goodbyes</a>
 </nav>
+
+<!-- CEDAR VALLEY ZOO ENTRANCE BANNER -->
+<div class="entrance-banner">
+    <img src="1a14128c72a42-screenshotUrl.jpg"
+         alt="The entrance to Cedar Valley Zoo">
+</div>
 
 <section>
     <h2>Welcome to Cedar Valley Zoo!</h2>
@@ -227,7 +255,6 @@ footer p {
 
 <section id="animals">
     <h2>🐾 Meet Our Animals</h2>
-
     <div class="animal-grid">
 
         <div class="card">
@@ -334,7 +361,6 @@ footer p {
             </div>
         </div>
 
-        <!-- NEW ANIMAL: SUMATRAN TIGER -->
         <div class="card">
             <img src="1a13e4a57b845-screenshotUrl.jpg" alt="Sumatran Tiger">
             <div class="card-content">
@@ -343,7 +369,6 @@ footer p {
             </div>
         </div>
 
-        <!-- NEW ANIMAL: YELLOW TANG -->
         <div class="card">
             <img src="1a13e4a751017-screenshotUrl.jpg" alt="Yellow Tang">
             <div class="card-content">
@@ -357,7 +382,6 @@ footer p {
 
 <section id="gallery">
     <h2>📸 Cedar Valley Zoo Gallery</h2>
-
     <p class="intro">
         Take a look at some of the amazing animals at Cedar Valley Zoo!
     </p>
@@ -468,7 +492,6 @@ footer p {
             </div>
         </div>
 
-        <!-- NEW GALLERY ENTRY: SUMATRAN TIGER -->
         <div class="card">
             <img src="1a13e4a57b845-screenshotUrl.jpg" alt="Sumatran Tiger">
             <div class="card-content">
@@ -477,7 +500,6 @@ footer p {
             </div>
         </div>
 
-        <!-- NEW GALLERY ENTRY: YELLOW TANG -->
         <div class="card">
             <img src="1a13e4a751017-screenshotUrl.jpg" alt="Yellow Tang">
             <div class="card-content">
@@ -501,13 +523,10 @@ footer p {
 
         <div class="card staff-card">
             <div class="staff-icon">👑🐰</div>
-
             <div class="card-content">
                 <h3>Shadow Bonnie</h3>
                 <p class="staff-role">Zoo Director &amp; Founder</p>
-
                 <p><strong>About them:</strong></p>
-
                 <p>
                     Shadow Bonnie founded Cedar Valley Zoo and leads its
                     future. They oversee the animals, the staff and the
@@ -518,21 +537,13 @@ footer p {
         </div>
 
         <div class="card staff-card">
-            <img
-                src="1a13b1a6eed88-screenshotUrl.jpg"
-                alt="Jeremiah Rapp, Master Veterinarian"
-            >
-
+            <img src="1a13b1a6eed88-screenshotUrl.jpg"
+                 alt="Jeremiah Rapp, Master Veterinarian">
             <div class="card-content">
                 <h3>🩺 Jeremiah Rapp</h3>
                 <p class="staff-role">Master Veterinarian</p>
-
-                <p class="staff-salary">
-                    💷 Salary: £200 per hour
-                </p>
-
+                <p class="staff-salary">💷 Salary: £200 per hour</p>
                 <p><strong>About them:</strong></p>
-
                 <p>
                     Jeremiah Rapp is a master veterinarian with
                     exceptional skills in animal healthcare.
@@ -547,9 +558,7 @@ footer p {
 
     <div class="award-card">
         <h3>🏆 Employee of the Month</h3>
-
         <p><strong>Coming soon!</strong></p>
-
         <p>
             We'll celebrate an outstanding member of the Cedar Valley
             Zoo team here when the first award is decided.
@@ -564,7 +573,6 @@ footer p {
 
 <section id="goodbyes">
     <h2>💚 Goodbyes</h2>
-
     <p class="intro">
         At Cedar Valley Zoo, every animal and every member of our zoo
         family matters. This space is reserved for remembering animals
